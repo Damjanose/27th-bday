@@ -38,16 +38,16 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
           className={opening ? "envelope is-open" : "envelope"}
           type="button"
           onClick={openEnvelope}
-          aria-label={`Open this, for ${content.herName}`}
+          aria-label={`Hape këtë, për ${content.herName}`}
         >
           <span className="envelope-flap" aria-hidden="true" />
           <span className="envelope-face">
-            <p className="kicker">For</p>
+            <p className="kicker">{content.ui.for}</p>
             <p className="display-name">{content.herName}</p>
             <span className="seal" aria-hidden="true">
               27
             </span>
-            <span className="open-hint">Open this</span>
+            <span className="open-hint">{content.ui.openThis}</span>
           </span>
         </button>
       </div>

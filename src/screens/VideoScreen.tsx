@@ -11,7 +11,7 @@ export function VideoScreen({ onNext, onBack }: VideoScreenProps) {
     <section className="screen">
       <div className="screen-head">
         <button className="btn-ghost" type="button" onClick={onBack}>
-          Back
+          {content.ui.back}
         </button>
       </div>
       <div className="screen-body is-fill">

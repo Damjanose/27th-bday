@@ -17,7 +17,7 @@ export function CloseScreen({ onReplay }: CloseScreenProps) {
       </div>
       <div className="screen-foot">
         <button className="btn" type="button" onClick={onReplay}>
-          Replay
+          {content.ui.replay}
         </button>
       </div>
     </section>

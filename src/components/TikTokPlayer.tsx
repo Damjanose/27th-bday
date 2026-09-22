@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { content } from "../content.ts"
 
 type TikTokPlayerProps = {
   id: string
@@ -110,7 +111,7 @@ export function TikTokPlayer({ id, title, onEnded }: TikTokPlayerProps) {
   if (failed) {
     return (
       <div className="tiktok">
-        <p className="tiktok-fallback-text">The video could not load here.</p>
+        <p className="tiktok-fallback-text">{content.ui.videoFailed}</p>
       </div>
     )
   }
@@ -131,7 +132,7 @@ export function TikTokPlayer({ id, title, onEnded }: TikTokPlayerProps) {
         />
         {needsTap ? (
           <button className="tiktok-play" type="button" onClick={playNow}>
-            Play
+            {content.ui.play}
           </button>
         ) : null}
       </div>

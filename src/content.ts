@@ -1,22 +1,32 @@
 export const content = {
   herName: "Tushi ime",
   letter: [
-    "Happy birthday, Tushi ime.",
-    "Almost four years together, and I still feel lucky that the ordinary days belong to us.",
-    "Dasho, I love you so much. Spending every single day with you is the best present I could ask for.",
+    "Gëzuar ditëlindjen, Tushi ime.",
+    "Gati katër vite bashkë, dhe ende ndihem me fat që ditët e zakonshme janë tonat.",
+    "Dasho, të dua shumë. Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja.",
   ],
   reasons: [
-    "Almost four years in, and I still look for you first when I walk into a room.",
-    "Tushi ime. You are the soft place I come back to, every single day.",
-    "Dasho, I love you so much. Even the quiet minutes feel like the point of all this.",
-    "Spending every single day with you is the best present I could ask for. I would choose this life again.",
+    "Gati katër vite, dhe ende të kërkoj ty e parën kur hyj në një dhomë.",
+    "Tushi ime. Ti je vendi i butë ku kthehem, çdo ditë.",
+    "Dasho, të dua shumë. Edhe minutat e qeta duken si kuptimi i gjithë kësaj.",
+    "Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja. Do e zgjidhja këtë jetë sërish.",
   ],
   closeLines: [
-    "I love you so much, Tushi ime.",
-    "Happy birthday, Dasho.",
+    "Të dua shumë, Tushi ime.",
+    "Gëzuar ditëlindjen, Dasho.",
   ],
+  ui: {
+    for: "Për",
+    openThis: "Hape",
+    back: "Kthehu",
+    continue: "Vazhdo",
+    next: "Tjetra",
+    replay: "Përsëri",
+    play: "Nise",
+    videoFailed: "Videoja nuk u ngarkua këtu.",
+  },
   tiktok: {
     id: "7684654450157423893",
-    title: "Birthday video",
+    title: "Video e ditëlindjes",
   },
 } as const

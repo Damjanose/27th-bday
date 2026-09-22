@@ -10,7 +10,7 @@ export function LetterScreen({ onNext, onBack }: LetterScreenProps) {
     <section className="screen">
       <div className="screen-head">
         <button className="btn-ghost" type="button" onClick={onBack}>
-          Back
+          {content.ui.back}
         </button>
       </div>
       <div className="screen-body">
@@ -22,7 +22,7 @@ export function LetterScreen({ onNext, onBack }: LetterScreenProps) {
       </div>
       <div className="screen-foot">
         <button className="btn" type="button" onClick={onNext}>
-          Continue
+          {content.ui.continue}
         </button>
       </div>
     </section>

@@ -30,7 +30,7 @@ export function ReasonsScreen({ onNext, onBack }: ReasonsScreenProps) {
     <section className="screen">
       <div className="screen-head">
         <button className="btn-ghost" type="button" onClick={goBack}>
-          Back
+          {content.ui.back}
         </button>
       </div>
       <div className="screen-body">
@@ -46,7 +46,7 @@ export function ReasonsScreen({ onNext, onBack }: ReasonsScreenProps) {
       </div>
       <div className="screen-foot">
         <button className="btn" type="button" onClick={goNext}>
-          {last ? "Continue" : "Next"}
+          {last ? content.ui.continue : content.ui.next}
         </button>
       </div>
     </section>
