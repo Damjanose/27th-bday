@@ -1,0 +1,57 @@
+{
+  "updatedAt": "2026-09-22T18:05:00+02:00",
+  "sessionBudget": {
+    "maxTokens": 80000,
+    "maxMidLevelTasks": 2,
+    "notes": "Whichever limit is hit first. One large task or ~4 small tasks also counts as a full session."
+  },
+  "status": "idle",
+  "completed": [
+    {
+      "task": "Create AGENTS.md with cheap models in Ask mode and capable models in Plan/implement",
+      "files": ["AGENTS.md"]
+    },
+    {
+      "task": "Add always-on Cursor rule for the same model routing",
+      "files": [".cursor/rules/model-routing.mdc"]
+    },
+    {
+      "task": "Add mid-range session budget, progress JSON, and handoff rule",
+      "files": [
+        "AGENTS.md",
+        ".cursor/rules/session-budget.mdc",
+        ".cursor/session-progress.json"
+      ]
+    },
+    {
+      "task": "Implement fiancée birthday Vite React gift app from approved plan",
+      "files": [
+        "package.json",
+        "index.html",
+        "vercel.json",
+        "src/content.ts",
+        "src/App.tsx",
+        "src/screens/",
+        "src/components/TikTokPlayer.tsx"
+      ]
+    }
+  ],
+  "inProgress": {
+    "task": null,
+    "files": [],
+    "decisions": [
+      "Vite + React + TS in existing repo.",
+      "No router; step state; refresh always Welcome.",
+      "herName placeholder Love in src/content.ts.",
+      "TikTok official player id 7684654450157423893 works in iframe.",
+      "vercel.json included; user deploys."
+    ],
+    "nextSteps": [
+      "User edits src/content.ts names and letter.",
+      "User deploys to Vercel."
+    ],
+    "blockers": []
+  },
+  "queued": [],
+  "howToResume": "App is implemented. Next request is likely copy edits or deploy help."
+}

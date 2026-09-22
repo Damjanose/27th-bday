@@ -1,0 +1,58 @@
+:root {
+  --night: #1a1218;
+  --glass: #2a1c24;
+  --ink: #f4ede4;
+  --candle: #e8c9a8;
+  --seal: #9c3d54;
+  --mute: #c4b4a8;
+  --room: #0e0a0c;
+
+  --font-display: "Italiana", serif;
+  --font-letter: "Newsreader", "Times New Roman", serif;
+  --font-ui: "Source Sans 3", "Segoe UI", sans-serif;
+
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+
+  --tap: 44px;
+  --ease: ease;
+  --page-ms: 280ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--room);
+}
+
+body {
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background: var(--room);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--candle);
+  outline-offset: 3px;
+}

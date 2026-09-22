@@ -1,0 +1,36 @@
+---
+description: Route cheap models in Ask mode; use capable models for Plan and implementation
+alwaysApply: true
+---
+
+# Model routing
+
+Do not burn expensive models on Q&A. Route by Cursor mode and whether you are changing code.
+
+## Ask mode (read-only)
+
+- Answer in this chat. Do not launch subagents unless a search is too large to do yourself.
+- If you must use `Task`, set `model` to `composer-2.5-fast`. Never pick Opus, GPT-5.x, or other high-cost models.
+- Do not switch to Plan or Agent just to answer a question.
+- Prefer Grep, Read, Glob, and short replies over multi-agent exploration.
+
+## Plan mode
+
+- Use `gpt-5.6-luna-medium` or `claude-opus-5-thinking-high` on any `Task` you launch.
+- Explore thoroughly and produce a concrete plan. Do not implement until the user asks.
+
+## Agent mode (implement / edit)
+
+- Use `gpt-5.6-luna-medium` or `claude-opus-5-thinking-high` for implementation, refactors, reviews, and verification.
+- Default `inherit` is fine when this chat is already on a strong model.
+- Do not fall back to `composer-2.5-fast` for coding, architecture, or debugging unless the user asks to save cost.
+
+## Quick map
+
+| Situation | Subagent `model` |
+| --- | --- |
+| Ask mode | `composer-2.5-fast` |
+| Plan mode | `gpt-5.6-luna-medium` or `claude-opus-5-thinking-high` |
+| Implementing or reviewing | `gpt-5.6-luna-medium` or `claude-opus-5-thinking-high` |
+
+If a mode is unclear: questions → cheap; designing or writing code → capable.

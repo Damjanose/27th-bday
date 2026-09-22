@@ -1,0 +1,14 @@
+---
+description: Cap each chat at a mid-range budget; compress progress to JSON and start a new session
+alwaysApply: true
+---
+
+# Session budget
+
+Mid-range cap: **~80,000 tokens** or **2 mid-level tasks**, whichever comes first. One large task or about four small ones also fills a session.
+
+- Start by reading `.cursor/session-progress.json`. Resume `inProgress` and `queued`.
+- Update that file as tasks finish. Keep `compressedContext` short and factual.
+- At the cap, or if the user continues anyway: compress the conversation into the JSON (goal, done, files, decisions, next steps, blockers). Set `status` to `needs_new_session`.
+- Stop implementing. Ask the user to open a **new chat** and continue from that file.
+- Do not start a third mid-level task in the same session.
