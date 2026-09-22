@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { PhoneShell } from "./components/PhoneShell.tsx"
 import { CloseScreen } from "./screens/CloseScreen.tsx"
 import { LetterScreen } from "./screens/LetterScreen.tsx"
@@ -10,34 +10,26 @@ type Step = "welcome" | "letter" | "reasons" | "video" | "close"
 
 export default function App() {
   const [step, setStep] = useState<Step>("welcome")
+  const goLetter = useCallback(() => setStep("letter"), [])
+  const goReasons = useCallback(() => setStep("reasons"), [])
+  const goWelcome = useCallback(() => setStep("welcome"), [])
+  const goVideo = useCallback(() => setStep("video"), [])
+  const goClose = useCallback(() => setStep("close"), [])
 
   return (
     <PhoneShell>
       <div className="stage" key={step}>
-        {step === "welcome" ? (
-          <WelcomeScreen onNext={() => setStep("letter")} />
-        ) : null}
+        {step === "welcome" ? <WelcomeScreen onNext={goLetter} /> : null}
         {step === "letter" ? (
-          <LetterScreen
-            onNext={() => setStep("reasons")}
-            onBack={() => setStep("welcome")}
-          />
+          <LetterScreen onNext={goReasons} onBack={goWelcome} />
         ) : null}
         {step === "reasons" ? (
-          <ReasonsScreen
-            onNext={() => setStep("video")}
-            onBack={() => setStep("letter")}
-          />
+          <ReasonsScreen onNext={goVideo} onBack={goLetter} />
         ) : null}
         {step === "video" ? (
-          <VideoScreen
-            onNext={() => setStep("close")}
-            onBack={() => setStep("reasons")}
-          />
+          <VideoScreen onNext={goClose} onBack={goReasons} />
         ) : null}
-        {step === "close" ? (
-          <CloseScreen onReplay={() => setStep("welcome")} />
-        ) : null}
+        {step === "close" ? <CloseScreen onReplay={goWelcome} /> : null}
       </div>
     </PhoneShell>
   )

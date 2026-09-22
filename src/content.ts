@@ -1,20 +1,22 @@
 export const content = {
-  herName: "Love",
+  herName: "Tushi ime",
   letter: [
-    "Happy birthday.",
-    "I made you a small place on the internet, just for today. No feed. No noise. Only this.",
-    "When you are ready, keep going.",
+    "Happy birthday, Tushi ime.",
+    "Almost four years together, and I still feel lucky that the ordinary days belong to us.",
+    "Dasho, I love you so much. Spending every single day with you is the best present I could ask for.",
   ],
   reasons: [
-    "The way you look at me when you are about to laugh.",
-    "How ordinary Tuesdays feel different with you in them.",
-    "That I get to keep choosing you.",
+    "Almost four years in, and I still look for you first when I walk into a room.",
+    "Tushi ime. You are the soft place I come back to, every single day.",
+    "Dasho, I love you so much. Even the quiet minutes feel like the point of all this.",
+    "Spending every single day with you is the best present I could ask for. I would choose this life again.",
   ],
-  closeLine: "That is all I wanted to say today.",
-  closeWish: "Happy birthday.",
+  closeLines: [
+    "I love you so much, Tushi ime.",
+    "Happy birthday, Dasho.",
+  ],
   tiktok: {
     id: "7684654450157423893",
-    shortUrl: "https://vt.tiktok.com/ZSqEoPtVG/",
     title: "Birthday video",
   },
 } as const

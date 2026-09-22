@@ -9,10 +9,11 @@ export function CloseScreen({ onReplay }: CloseScreenProps) {
     <section className="screen">
       <div className="screen-head" />
       <div className="screen-body">
-        <p className="close-line">{content.closeLine}</p>
-        <p className="close-line">
-          {content.closeWish} {content.herName}.
-        </p>
+        {content.closeLines.map((line) => (
+          <p className="close-line" key={line}>
+            {line}
+          </p>
+        ))}
       </div>
       <div className="screen-foot">
         <button className="btn" type="button" onClick={onReplay}>

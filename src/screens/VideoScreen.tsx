@@ -17,14 +17,9 @@ export function VideoScreen({ onNext, onBack }: VideoScreenProps) {
       <div className="screen-body is-fill">
         <TikTokPlayer
           id={content.tiktok.id}
-          shortUrl={content.tiktok.shortUrl}
           title={content.tiktok.title}
+          onEnded={onNext}
         />
-      </div>
-      <div className="screen-foot">
-        <button className="btn" type="button" onClick={onNext}>
-          Continue
-        </button>
       </div>
     </section>
   )
