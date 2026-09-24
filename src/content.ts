@@ -56,4 +56,8 @@ export const content = {
   video: {
     title: "Video e ditëlindjes",
   },
+  bgMusic: {
+    youtubeId: "mwhbRuUBmpo",
+    title: "Muzikë në sfond",
+  },
 } as const

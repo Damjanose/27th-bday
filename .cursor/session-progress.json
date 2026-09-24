@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:28:00+02:00",
+  "updatedAt": "2026-09-24T13:34:00+02:00",
   "sessionBudget": {
     "maxTokens": 80000,
     "maxMidLevelTasks": 2,
@@ -11,8 +11,18 @@
       "task": "Replace TikTok embed with local assets/video.mp4",
       "files": [
         "src/components/VideoPlayer.tsx",
-        "src/components/TikTokPlayer.tsx",
         "src/screens/VideoScreen.tsx",
+        "src/content.ts",
+        "src/styles/app.css"
+      ]
+    },
+    {
+      "task": "YouTube bg music: start on Hape, middle screens only, stop on last memory",
+      "files": [
+        "src/components/BackgroundMusic.tsx",
+        "src/App.tsx",
+        "src/screens/WelcomeScreen.tsx",
+        "src/screens/MemoriesScreen.tsx",
         "src/content.ts",
         "src/styles/app.css"
       ]
@@ -22,13 +32,14 @@
     "task": null,
     "files": [],
     "decisions": [
-      "Video uses native <video> from assets/video.mp4 via Vite import.",
-      "Muted autoplay then unmute; tap overlay if autoplay blocked; onEnded advances."
+      "Music: YouTube embed mwhbRuUBmpo via IFrame API.",
+      "Starts on Hape; plays letter/reasons/memories; stops on last memory photo; off for video/close.",
+      "Replay resets music until Hape again."
     ],
     "nextSteps": [],
     "blockers": []
   },
   "queued": [],
-  "howToResume": "Local video player ships; prior session history is in completed[].",
-  "compressedContext": "Birthday gift Vite React app. Steps: welcome → letter → reasons → memories → video → close. Video is local MP4, not TikTok."
+  "howToResume": "Local video + mid-journey YouTube BGM done.",
+  "compressedContext": "Birthday gift app. Flow: welcome → letter → reasons → memories → video → close. Video = assets/video.mp4. BGM = YouTube mwhbRuUBmpo from Hape until last memory image."
 }

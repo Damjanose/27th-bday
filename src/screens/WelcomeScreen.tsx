@@ -3,9 +3,10 @@ import { content } from "../content.ts"
 
 type WelcomeScreenProps = {
   onNext: () => void
+  onUnlockMusic: () => void
 }
 
-export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
+export function WelcomeScreen({ onNext, onUnlockMusic }: WelcomeScreenProps) {
   const [opening, setOpening] = useState(false)
 
   useEffect(() => {
@@ -17,6 +18,8 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
 
   function openEnvelope() {
     if (opening) return
+
+    onUnlockMusic()
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",

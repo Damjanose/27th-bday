@@ -1,15 +1,24 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { content } from "../content.ts"
 
 type MemoriesScreenProps = {
   onNext: () => void
   onBack: () => void
+  onLastImageChange: (isLast: boolean) => void
 }
 
-export function MemoriesScreen({ onNext, onBack }: MemoriesScreenProps) {
+export function MemoriesScreen({
+  onNext,
+  onBack,
+  onLastImageChange,
+}: MemoriesScreenProps) {
   const [index, setIndex] = useState(0)
   const last = index === content.memories.length - 1
   const memory = content.memories[index]
+
+  useEffect(() => {
+    onLastImageChange(last)
+  }, [last, onLastImageChange])
 
   function goNext() {
     if (last) {
