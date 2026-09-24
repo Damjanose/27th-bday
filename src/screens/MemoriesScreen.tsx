@@ -1,16 +1,15 @@
 import { useState } from "react"
-import { StepPhoto } from "../components/StepPhoto.tsx"
 import { content } from "../content.ts"
 
-type ReasonsScreenProps = {
+type MemoriesScreenProps = {
   onNext: () => void
   onBack: () => void
 }
 
-export function ReasonsScreen({ onNext, onBack }: ReasonsScreenProps) {
+export function MemoriesScreen({ onNext, onBack }: MemoriesScreenProps) {
   const [index, setIndex] = useState(0)
-  const last = index === content.reasons.length - 1
-  const reason = content.reasons[index]
+  const last = index === content.memories.length - 1
+  const memory = content.memories[index]
 
   function goNext() {
     if (last) {
@@ -36,14 +35,24 @@ export function ReasonsScreen({ onNext, onBack }: ReasonsScreenProps) {
         </button>
       </div>
       <div className="screen-body is-fill">
-        <StepPhoto src={reason.photo} alt={content.herName} />
+        <div className="step-photo">
+          <img
+            className="step-photo-img"
+            key={memory.src}
+            src={memory.src}
+            alt={memory.caption || content.ui.memoriesTitle}
+          />
+        </div>
         <div className="step-panel">
-          <p className="beat">{reason.text}</p>
+          <p className="kicker">{content.ui.memoriesTitle}</p>
+          {memory.caption ? (
+            <p className="memory-caption">{memory.caption}</p>
+          ) : null}
           <div className="dots" aria-hidden="true">
-            {content.reasons.map((item) => (
+            {content.memories.map((item) => (
               <span
-                className={item.photo === reason.photo ? "dot is-on" : "dot"}
-                key={item.photo}
+                className={item.src === memory.src ? "dot is-on" : "dot"}
+                key={item.src}
               />
             ))}
           </div>

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T18:12:00+02:00",
+  "updatedAt": "2026-09-24T13:05:00+02:00",
   "sessionBudget": {
     "maxTokens": 80000,
     "maxMidLevelTasks": 2,
@@ -38,24 +38,45 @@
     {
       "task": "Translate HTML/OG project description to Albanian",
       "files": ["index.html"]
+    },
+    {
+      "task": "Memories Photo Screen between Reasons and Video",
+      "files": [
+        "public/photos/",
+        "src/content.ts",
+        "src/screens/MemoriesScreen.tsx",
+        "src/App.tsx",
+        "src/styles/app.css"
+      ]
+    },
+    {
+      "task": "Step photos on Welcome/Letter/Reasons/Close; leftovers in Memories carousel",
+      "files": [
+        "src/content.ts",
+        "src/components/StepPhoto.tsx",
+        "src/screens/WelcomeScreen.tsx",
+        "src/screens/LetterScreen.tsx",
+        "src/screens/ReasonsScreen.tsx",
+        "src/screens/CloseScreen.tsx",
+        "src/styles/app.css"
+      ]
     }
   ],
   "inProgress": {
     "task": null,
     "files": [],
     "decisions": [
-      "Vite + React + TS in existing repo.",
-      "No router; step state; refresh always Welcome.",
-      "herName placeholder Love in src/content.ts.",
-      "TikTok official player id 7684654450157423893 works in iframe.",
-      "vercel.json included; user deploys."
+      "Photo above, greeting/copy below — no text overlay on faces.",
+      "Step photos: welcome 02, letter 04, reasons 03/06/07/11, close 01.",
+      "Memories carousel: 05, 08–10, 12–15.",
+      "Video stays TikTok-only."
     ],
     "nextSteps": [
-      "User edits src/content.ts names and letter.",
-      "User deploys to Vercel."
+      "User may swap stepPhotos / captions in content.ts.",
+      "Session mid-level task cap reached — open new chat for more implementation."
     ],
     "blockers": []
   },
   "queued": [],
-  "howToResume": "App is implemented. Next request is likely copy edits or deploy help."
+  "howToResume": "Step photos + Memories leftovers done. Mid-level task cap hit for this chat; continue in a new session from this file."
 }

@@ -6,10 +6,37 @@ export const content = {
     "Dasho, të dua shumë. Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja.",
   ],
   reasons: [
-    "Gati katër vite, dhe ende të kërkoj ty e parën kur hyj në një dhomë.",
-    "Tushi ime. Ti je vendi i butë ku kthehem, çdo ditë.",
-    "Dasho, të dua shumë. Edhe minutat e qeta duken si kuptimi i gjithë kësaj.",
-    "Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja. Do e zgjidhja këtë jetë sërish.",
+    {
+      text: "Gati katër vite, dhe ende të kërkoj ty e parën kur hyj në një dhomë.",
+      photo: "/photos/03-terrace.jpg",
+    },
+    {
+      text: "Tushi ime. Ti je vendi i butë ku kthehem, çdo ditë.",
+      photo: "/photos/06-polka-hug.jpg",
+    },
+    {
+      text: "Dasho, të dua shumë. Edhe minutat e qeta duken si kuptimi i gjithë kësaj.",
+      photo: "/photos/07-cowboy-hat.jpg",
+    },
+    {
+      text: "Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja. Do e zgjidhja këtë jetë sërish.",
+      photo: "/photos/11-car.jpg",
+    },
+  ],
+  stepPhotos: {
+    letter: "/photos/04-cream-kiss.jpg",
+    close: "/photos/01-ring.jpg",
+  },
+  memories: [
+    { src: "/photos/02-budapest.jpg", caption: "Budapest" },
+    { src: "/photos/05-sunset-street.jpg", caption: "Perëndimi" },
+    { src: "/photos/08-heart-sunset.jpg", caption: "Zemra" },
+    { src: "/photos/09-colosseum.jpg", caption: "Roma" },
+    { src: "/photos/10-fountain-night.jpg", caption: "Natë" },
+    { src: "/photos/12-elevator.jpg", caption: "Butë" },
+    { src: "/photos/13-formal.jpg", caption: "Festë" },
+    { src: "/photos/14-rooftop.jpg", caption: "Ne" },
+    { src: "/photos/15-hands.jpg", caption: "Duar" },
   ],
   closeLines: [
     "Të dua shumë, Tushi ime.",
@@ -24,6 +51,7 @@ export const content = {
     replay: "Përsëri",
     play: "Nise",
     videoFailed: "Videoja nuk u ngarkua këtu.",
+    memoriesTitle: "Ne",
   },
   tiktok: {
     id: "7684654450157423893",
