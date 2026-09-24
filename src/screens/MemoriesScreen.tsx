@@ -44,7 +44,6 @@ export function MemoriesScreen({ onNext, onBack }: MemoriesScreenProps) {
           />
         </div>
         <div className="step-panel">
-          <p className="kicker">{content.ui.memoriesTitle}</p>
           {memory.caption ? (
             <p className="memory-caption">{memory.caption}</p>
           ) : null}

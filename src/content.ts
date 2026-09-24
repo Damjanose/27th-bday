@@ -53,8 +53,7 @@ export const content = {
     videoFailed: "Videoja nuk u ngarkua këtu.",
     memoriesTitle: "Ne",
   },
-  tiktok: {
-    id: "7684654450157423893",
+  video: {
     title: "Video e ditëlindjes",
   },
 } as const

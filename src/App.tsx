@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { PhoneShell } from "./components/PhoneShell.tsx"
 import { CloseScreen } from "./screens/CloseScreen.tsx"
 import { LetterScreen } from "./screens/LetterScreen.tsx"
@@ -17,6 +17,12 @@ export default function App() {
   const goMemories = useCallback(() => setStep("memories"), [])
   const goVideo = useCallback(() => setStep("video"), [])
   const goClose = useCallback(() => setStep("close"), [])
+
+  useEffect(() => {
+    // #region agent log
+    fetch('http://127.0.0.1:7860/ingest/2685b959-c7c3-49e7-97cf-98dd5bd2e467',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'f29b5b'},body:JSON.stringify({sessionId:'f29b5b',runId:'post-fix',hypothesisId:'C',location:'App.tsx:stepEffect',message:'app step changed',data:{step},timestamp:Date.now()})}).catch(()=>{});
+    // #endregion
+  }, [step])
 
   return (
     <PhoneShell>

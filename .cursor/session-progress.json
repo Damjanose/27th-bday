@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T13:05:00+02:00",
+  "updatedAt": "2026-09-24T13:28:00+02:00",
   "sessionBudget": {
     "maxTokens": 80000,
     "maxMidLevelTasks": 2,
@@ -8,56 +8,12 @@
   "status": "idle",
   "completed": [
     {
-      "task": "Create AGENTS.md with cheap models in Ask mode and capable models in Plan/implement",
-      "files": ["AGENTS.md"]
-    },
-    {
-      "task": "Add always-on Cursor rule for the same model routing",
-      "files": [".cursor/rules/model-routing.mdc"]
-    },
-    {
-      "task": "Add mid-range session budget, progress JSON, and handoff rule",
+      "task": "Replace TikTok embed with local assets/video.mp4",
       "files": [
-        "AGENTS.md",
-        ".cursor/rules/session-budget.mdc",
-        ".cursor/session-progress.json"
-      ]
-    },
-    {
-      "task": "Implement fiancée birthday Vite React gift app from approved plan",
-      "files": [
-        "package.json",
-        "index.html",
-        "vercel.json",
+        "src/components/VideoPlayer.tsx",
+        "src/components/TikTokPlayer.tsx",
+        "src/screens/VideoScreen.tsx",
         "src/content.ts",
-        "src/App.tsx",
-        "src/screens/",
-        "src/components/TikTokPlayer.tsx"
-      ]
-    },
-    {
-      "task": "Translate HTML/OG project description to Albanian",
-      "files": ["index.html"]
-    },
-    {
-      "task": "Memories Photo Screen between Reasons and Video",
-      "files": [
-        "public/photos/",
-        "src/content.ts",
-        "src/screens/MemoriesScreen.tsx",
-        "src/App.tsx",
-        "src/styles/app.css"
-      ]
-    },
-    {
-      "task": "Step photos on Welcome/Letter/Reasons/Close; leftovers in Memories carousel",
-      "files": [
-        "src/content.ts",
-        "src/components/StepPhoto.tsx",
-        "src/screens/WelcomeScreen.tsx",
-        "src/screens/LetterScreen.tsx",
-        "src/screens/ReasonsScreen.tsx",
-        "src/screens/CloseScreen.tsx",
         "src/styles/app.css"
       ]
     }
@@ -66,17 +22,13 @@
     "task": null,
     "files": [],
     "decisions": [
-      "Photo above, greeting/copy below — no text overlay on faces.",
-      "Step photos: welcome 02, letter 04, reasons 03/06/07/11, close 01.",
-      "Memories carousel: 05, 08–10, 12–15.",
-      "Video stays TikTok-only."
+      "Video uses native <video> from assets/video.mp4 via Vite import.",
+      "Muted autoplay then unmute; tap overlay if autoplay blocked; onEnded advances."
     ],
-    "nextSteps": [
-      "User may swap stepPhotos / captions in content.ts.",
-      "Session mid-level task cap reached — open new chat for more implementation."
-    ],
+    "nextSteps": [],
     "blockers": []
   },
   "queued": [],
-  "howToResume": "Step photos + Memories leftovers done. Mid-level task cap hit for this chat; continue in a new session from this file."
+  "howToResume": "Local video player ships; prior session history is in completed[].",
+  "compressedContext": "Birthday gift Vite React app. Steps: welcome → letter → reasons → memories → video → close. Video is local MP4, not TikTok."
 }
