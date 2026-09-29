@@ -2,7 +2,7 @@ export const content = {
   herName: "Tushi ime",
   letter: [
     "Gëzuar ditëlindjen, Tushi ime.",
-    "Gati katër vite bashkë, dhe ende ndihem me fat që ditët e zakonshme janë tonat.",
+    "Gati tre vite bashkë, dhe ende ndihem me fat që ditët e zakonshme janë tonat.",
     "Dasho, të dua shumë. Të kaloj çdo ditë me ty është dhurata më e bukur që mund të kërkoja.",
   ],
   reasons: [
