@@ -7,7 +7,7 @@ export const content = {
   ],
   reasons: [
     {
-      text: "Gati katër vite, dhe ende të kërkoj ty e parën kur hyj në një dhomë.",
+      text: "Gati tre vite, dhe ende të kërkoj ty e parën kur hyj në një dhomë.",
       photo: "/photos/03-terrace.jpg",
     },
     {
